@@ -251,7 +251,7 @@ openskills read github-search
 | 信息源总数 | N |
 | 收录条目 | X |
 | 平均评分 | 4.2 / 5 |
-| HN 博客命中 | M / 20 feeds |
+| HN 博客命中 | M / 90 feeds |
 | 分类覆盖 | K / 6 |
 
 ### 分类分布
@@ -427,6 +427,7 @@ pie title 来源贡献占比
 | 主题搜索 | "AI Agent 相关" | 主题聚焦模式 |
 | GitHub 搜索 | "GitHub MCP 项目" | 只调用 github-search |
 | 同步 Notion | "同步到 Notion" | 调用 notion-sync |
+
 
 
 

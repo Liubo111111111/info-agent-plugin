@@ -1,0 +1,818 @@
+{
+  "version": "1.0",
+  "source_set": "karpathy_hn_top_90",
+  "description": "Andrej Karpathy 推荐的 Hacker News 顶级技术博客 Top 90（默认源）",
+  "count": 90,
+  "feeds": [
+    {
+      "id": "hn_top90_01",
+      "rank": 1,
+      "name": "simonwillison.net",
+      "homepage": "https://simonwillison.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_02",
+      "rank": 2,
+      "name": "jeffgeerling.com",
+      "homepage": "https://jeffgeerling.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_03",
+      "rank": 3,
+      "name": "seangoedecke.com",
+      "homepage": "https://seangoedecke.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_04",
+      "rank": 4,
+      "name": "krebsonsecurity.com",
+      "homepage": "https://krebsonsecurity.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_05",
+      "rank": 5,
+      "name": "neal.fun",
+      "homepage": "https://neal.fun",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_06",
+      "rank": 6,
+      "name": "daringfireball.net",
+      "homepage": "https://daringfireball.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_07",
+      "rank": 7,
+      "name": "ericmigi.com",
+      "homepage": "https://ericmigi.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_08",
+      "rank": 8,
+      "name": "antirez.com",
+      "homepage": "https://antirez.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_09",
+      "rank": 9,
+      "name": "idiallo.com",
+      "homepage": "https://idiallo.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_10",
+      "rank": 10,
+      "name": "maurycyz.com",
+      "homepage": "https://maurycyz.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_11",
+      "rank": 11,
+      "name": "pluralistic.net",
+      "homepage": "https://pluralistic.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_12",
+      "rank": 12,
+      "name": "shkspr.mobi",
+      "homepage": "https://shkspr.mobi",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_13",
+      "rank": 13,
+      "name": "lcamtuf.substack.com",
+      "homepage": "https://lcamtuf.substack.com",
+      "rss_url": "https://lcamtuf.substack.com/feed",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_14",
+      "rank": 14,
+      "name": "mitchellh.com",
+      "homepage": "https://mitchellh.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_15",
+      "rank": 15,
+      "name": "dynomight.net",
+      "homepage": "https://dynomight.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_16",
+      "rank": 16,
+      "name": "utcc.utoronto.ca/~cks",
+      "homepage": "https://utcc.utoronto.ca/~cks",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_17",
+      "rank": 17,
+      "name": "xeiaso.net",
+      "homepage": "https://xeiaso.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_18",
+      "rank": 18,
+      "name": "devblogs.microsoft.com/oldnewthing",
+      "homepage": "https://devblogs.microsoft.com/oldnewthing",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_19",
+      "rank": 19,
+      "name": "righto.com",
+      "homepage": "https://righto.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_20",
+      "rank": 20,
+      "name": "lucumr.pocoo.org",
+      "homepage": "https://lucumr.pocoo.org",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_21",
+      "rank": 21,
+      "name": "skyfall.dev",
+      "homepage": "https://skyfall.dev",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_22",
+      "rank": 22,
+      "name": "byran.ee",
+      "homepage": "https://byran.ee",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_23",
+      "rank": 23,
+      "name": "garymarcus.substack.com",
+      "homepage": "https://garymarcus.substack.com",
+      "rss_url": "https://garymarcus.substack.com/feed",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_24",
+      "rank": 24,
+      "name": "rachelbythebay.com",
+      "homepage": "https://rachelbythebay.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_25",
+      "rank": 25,
+      "name": "overreacted.io",
+      "homepage": "https://overreacted.io",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_26",
+      "rank": 26,
+      "name": "timsh.org",
+      "homepage": "https://timsh.org",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_27",
+      "rank": 27,
+      "name": "johndcook.com",
+      "homepage": "https://johndcook.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_28",
+      "rank": 28,
+      "name": "gilesthomas.com",
+      "homepage": "https://gilesthomas.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_29",
+      "rank": 29,
+      "name": "matklad.github.io",
+      "homepage": "https://matklad.github.io",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_30",
+      "rank": 30,
+      "name": "thebignewsletter.com",
+      "homepage": "https://thebignewsletter.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_31",
+      "rank": 31,
+      "name": "derekthompson.org",
+      "homepage": "https://derekthompson.org",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_32",
+      "rank": 32,
+      "name": "evanhahn.com",
+      "homepage": "https://evanhahn.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_33",
+      "rank": 33,
+      "name": "terriblesoftware.org",
+      "homepage": "https://terriblesoftware.org",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_34",
+      "rank": 34,
+      "name": "rakhim.exotext.com",
+      "homepage": "https://rakhim.exotext.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_35",
+      "rank": 35,
+      "name": "joanwestenberg.com",
+      "homepage": "https://joanwestenberg.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_36",
+      "rank": 36,
+      "name": "xania.org",
+      "homepage": "https://xania.org",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_37",
+      "rank": 37,
+      "name": "micahflee.com",
+      "homepage": "https://micahflee.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_38",
+      "rank": 38,
+      "name": "nesbitt.io",
+      "homepage": "https://nesbitt.io",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_39",
+      "rank": 39,
+      "name": "construction-physics.com",
+      "homepage": "https://construction-physics.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_40",
+      "rank": 40,
+      "name": "tedium.co",
+      "homepage": "https://tedium.co",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_41",
+      "rank": 41,
+      "name": "susam.net",
+      "homepage": "https://susam.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_42",
+      "rank": 42,
+      "name": "entropicthoughts.com",
+      "homepage": "https://entropicthoughts.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_43",
+      "rank": 43,
+      "name": "buttondown.com/hillelwayne",
+      "homepage": "https://buttondown.com/hillelwayne",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_44",
+      "rank": 44,
+      "name": "dwarkesh.com",
+      "homepage": "https://dwarkesh.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_45",
+      "rank": 45,
+      "name": "borretti.me",
+      "homepage": "https://borretti.me",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_46",
+      "rank": 46,
+      "name": "wheresyoured.at",
+      "homepage": "https://wheresyoured.at",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_47",
+      "rank": 47,
+      "name": "jayd.ml",
+      "homepage": "https://jayd.ml",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_48",
+      "rank": 48,
+      "name": "minimaxir.com",
+      "homepage": "https://minimaxir.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_49",
+      "rank": 49,
+      "name": "geohot.github.io",
+      "homepage": "https://geohot.github.io",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_50",
+      "rank": 50,
+      "name": "paulgraham.com",
+      "homepage": "https://paulgraham.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_51",
+      "rank": 51,
+      "name": "filfre.net",
+      "homepage": "https://filfre.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_52",
+      "rank": 52,
+      "name": "blog.jim-nielsen.com",
+      "homepage": "https://blog.jim-nielsen.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_53",
+      "rank": 53,
+      "name": "dfarq.homeip.net",
+      "homepage": "https://dfarq.homeip.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_54",
+      "rank": 54,
+      "name": "jyn.dev",
+      "homepage": "https://jyn.dev",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_55",
+      "rank": 55,
+      "name": "geoffreylitt.com",
+      "homepage": "https://geoffreylitt.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_56",
+      "rank": 56,
+      "name": "downtowndougbrown.com",
+      "homepage": "https://downtowndougbrown.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_57",
+      "rank": 57,
+      "name": "brutecat.com",
+      "homepage": "https://brutecat.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_58",
+      "rank": 58,
+      "name": "emily.space",
+      "homepage": "https://emily.space",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_59",
+      "rank": 59,
+      "name": "eli.thegreenplace.net",
+      "homepage": "https://eli.thegreenplace.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_60",
+      "rank": 60,
+      "name": "abortretry.fail",
+      "homepage": "https://abortretry.fail",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_61",
+      "rank": 61,
+      "name": "fabiensanglard.net",
+      "homepage": "https://fabiensanglard.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_62",
+      "rank": 62,
+      "name": "oldvcr.blogspot.com",
+      "homepage": "https://oldvcr.blogspot.com",
+      "rss_url": "https://oldvcr.blogspot.com/feeds/posts/default?alt=rss",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_63",
+      "rank": 63,
+      "name": "bogdanthegeek.github.io",
+      "homepage": "https://bogdanthegeek.github.io",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_64",
+      "rank": 64,
+      "name": "hugotunius.se",
+      "homepage": "https://hugotunius.se",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_65",
+      "rank": 65,
+      "name": "gwern.net",
+      "homepage": "https://gwern.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_66",
+      "rank": 66,
+      "name": "makingsoftware.com",
+      "homepage": "https://makingsoftware.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_67",
+      "rank": 67,
+      "name": "berthub.eu",
+      "homepage": "https://berthub.eu",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_68",
+      "rank": 68,
+      "name": "chadnauseam.com",
+      "homepage": "https://chadnauseam.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_69",
+      "rank": 69,
+      "name": "simone.org",
+      "homepage": "https://simone.org",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_70",
+      "rank": 70,
+      "name": "it-notes.dragas.net",
+      "homepage": "https://it-notes.dragas.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_71",
+      "rank": 71,
+      "name": "beej.us",
+      "homepage": "https://beej.us",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_72",
+      "rank": 72,
+      "name": "hey.paris",
+      "homepage": "https://hey.paris",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_73",
+      "rank": 73,
+      "name": "danielwirtz.com",
+      "homepage": "https://danielwirtz.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_74",
+      "rank": 74,
+      "name": "matduggan.com",
+      "homepage": "https://matduggan.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_75",
+      "rank": 75,
+      "name": "refactoringenglish.com Refactoring English book",
+      "homepage": "https://refactoringenglish.com Refactoring English book",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_76",
+      "rank": 76,
+      "name": "worksonmymachine.substack.com",
+      "homepage": "https://worksonmymachine.substack.com",
+      "rss_url": "https://worksonmymachine.substack.com/feed",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_77",
+      "rank": 77,
+      "name": "philiplaine.com",
+      "homepage": "https://philiplaine.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_78",
+      "rank": 78,
+      "name": "steveblank.com",
+      "homepage": "https://steveblank.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_79",
+      "rank": 79,
+      "name": "bernsteinbear.com",
+      "homepage": "https://bernsteinbear.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_80",
+      "rank": 80,
+      "name": "danieldelaney.net",
+      "homepage": "https://danieldelaney.net",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_81",
+      "rank": 81,
+      "name": "troyhunt.com",
+      "homepage": "https://troyhunt.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_82",
+      "rank": 82,
+      "name": "herman.bearblog.dev",
+      "homepage": "https://herman.bearblog.dev",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_83",
+      "rank": 83,
+      "name": "sergey.fyi",
+      "homepage": "https://sergey.fyi",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_84",
+      "rank": 84,
+      "name": "gatesnotes.com",
+      "homepage": "https://gatesnotes.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_85",
+      "rank": 85,
+      "name": "tomrenner.com",
+      "homepage": "https://tomrenner.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_86",
+      "rank": 86,
+      "name": "blog.pixelmelt.dev",
+      "homepage": "https://blog.pixelmelt.dev",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_87",
+      "rank": 87,
+      "name": "martinalderson.com",
+      "homepage": "https://martinalderson.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_88",
+      "rank": 88,
+      "name": "danielchasehooper.com",
+      "homepage": "https://danielchasehooper.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_89",
+      "rank": 89,
+      "name": "chiark.greenend.org.uk/~sgtatham",
+      "homepage": "https://chiark.greenend.org.uk/~sgtatham",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    },
+    {
+      "id": "hn_top90_90",
+      "rank": 90,
+      "name": "grantslatton.com",
+      "homepage": "https://grantslatton.com",
+      "rss_url": "",
+      "enabled": true,
+      "source": "Andrej Karpathy recommended HN Top 90 (2025)"
+    }
+  ]
+}

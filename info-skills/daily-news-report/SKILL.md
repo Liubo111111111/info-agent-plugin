@@ -12,7 +12,7 @@ allowed-tools: Task, WebFetch, Read, Write, Shell(mkdir*), user-Notion-*
 
 | 特性 | v2.x | v3.0 |
 |------|------|------|
-| HN 信息源 | 仅首页热帖 | 首页热帖 + 20 个顶级博客 RSS |
+| HN 信息源 | 仅首页热帖 | 首页热帖 + 90 个顶级博客（Karpathy Top 90） |
 | 评分体系 | 1-5 简单评分 | 三维评分（相关性/质量/时效） |
 | 内容分类 | 无 | 六大分类自动归类 |
 | 报告结构 | 平铺列表 | 今日看点→必读→分类展示→数据概览 |
@@ -71,7 +71,7 @@ allowed-tools: Task, WebFetch, Read, Write, Shell(mkdir*), user-Notion-*
 | 优先级 | 源类型 | 抓取方法 | 说明 |
 |--------|--------|----------|------|
 | 1A | HN 首页热帖 | WebFetch | 通道 A：Top 15 热帖 |
-| 1B | HN 顶级博客 RSS | Jina Reader / WebFetch | 通道 B：20 个博客 RSS 并发抓取 |
+| 1B | HN 顶级博客 RSS | Jina Reader / WebFetch | 通道 B：90 个博客源并发抓取（优先 RSS） |
 | 1C | HF Papers + PG + OneUsefulThing | WebFetch | 其他 Tier1 源 |
 | 2 | Tier2 (James Clear, FS Blog) | WebFetch | 按需补充 |
 | 3 | Tier3 Browser (ProductHunt) | WebFetch（可能不完整） | 需要 JS 渲染 |
@@ -235,7 +235,7 @@ final_star = round(weighted_score / 2)  # 映射到 1-5 星
 | 信息源总数 | N |
 | 收录条目 | X |
 | 平均评分 | 4.2 / 5 |
-| HN 博客命中 | M / 20 feeds |
+| HN 博客命中 | M / 90 feeds |
 | 分类覆盖 | K / 6 |
 
 ### 分类分布
@@ -375,6 +375,7 @@ pie title 来源贡献占比
 - **Task 工具**：用于调度 subagent 并行执行
 - **news-fetcher subagent**：专用抓取 worker
 - **Notion MCP**：用于自动同步（可选）
+
 
 
 
