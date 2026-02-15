@@ -1,0 +1,265 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Skills Cache Schema",
+  "description": "统一的缓存文件格式规范，适用于 daily-news-report、x-digest 等信息提取类 Skills",
+  "version": "1.0",
+
+  "type": "object",
+  "required": ["version", "last_run"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "缓存格式版本号",
+      "examples": ["1.0", "2.0"]
+    },
+
+    "last_run": {
+      "type": "object",
+      "description": "最近一次运行的信息",
+      "required": ["date", "timestamp"],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "运行日期 YYYY-MM-DD",
+          "examples": ["2026-01-23"]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "运行时间戳 ISO 8601",
+          "examples": ["2026-01-23T10:30:00Z"]
+        },
+        "duration_ms": {
+          "type": "integer",
+          "description": "运行耗时（毫秒）",
+          "examples": [45000]
+        },
+        "items_fetched": {
+          "type": "integer",
+          "description": "抓取的条目总数",
+          "examples": [50]
+        },
+        "items_included": {
+          "type": "integer",
+          "description": "收录的条目数",
+          "examples": [20]
+        },
+        "sources_success": {
+          "type": "array",
+          "description": "成功的源列表",
+          "items": { "type": "string" },
+          "examples": [["hn", "hf_papers", "paul_graham"]]
+        },
+        "sources_failed": {
+          "type": "array",
+          "description": "失败的源列表",
+          "items": { "type": "string" },
+          "examples": [["producthunt"]]
+        },
+        "errors": {
+          "type": "array",
+          "description": "错误信息列表",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": { "type": "string" },
+              "error": { "type": "string" },
+              "timestamp": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      }
+    },
+
+    "url_cache": {
+      "type": "object",
+      "description": "URL 缓存，用于去重",
+      "properties": {
+        "ttl_days": {
+          "type": "integer",
+          "description": "缓存有效期（天）",
+          "default": 7
+        },
+        "entries": {
+          "type": "object",
+          "description": "URL 到日期的映射",
+          "additionalProperties": {
+            "type": "string",
+            "format": "date"
+          },
+          "examples": [{
+            "https://example.com/article1": "2026-01-23",
+            "https://example.com/article2": "2026-01-22"
+          }]
+        }
+      }
+    },
+
+    "content_hashes": {
+      "type": "object",
+      "description": "内容指纹缓存，用于去重",
+      "properties": {
+        "ttl_days": {
+          "type": "integer",
+          "description": "缓存有效期（天）",
+          "default": 7
+        },
+        "entries": {
+          "type": "object",
+          "description": "内容指纹到日期的映射",
+          "additionalProperties": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+
+    "source_stats": {
+      "type": "object",
+      "description": "各源的统计信息",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "total_runs": {
+            "type": "integer",
+            "description": "总运行次数"
+          },
+          "success_count": {
+            "type": "integer",
+            "description": "成功次数"
+          },
+          "success_rate": {
+            "type": "number",
+            "description": "成功率 0-1",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "avg_quality": {
+            "type": "number",
+            "description": "平均质量分",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "avg_items": {
+            "type": "number",
+            "description": "平均抓取条目数"
+          },
+          "last_success": {
+            "type": "string",
+            "format": "date-time",
+            "description": "最近成功时间"
+          },
+          "last_failure": {
+            "type": "string",
+            "format": "date-time",
+            "description": "最近失败时间"
+          },
+          "consecutive_failures": {
+            "type": "integer",
+            "description": "连续失败次数",
+            "default": 0
+          }
+        }
+      }
+    },
+
+    "article_history": {
+      "type": "object",
+      "description": "收录文章的历史记录",
+      "properties": {
+        "max_entries": {
+          "type": "integer",
+          "description": "最大记录数",
+          "default": 500
+        },
+        "entries": {
+          "type": "array",
+          "description": "文章记录列表",
+          "items": {
+            "type": "object",
+            "required": ["title", "url", "date"],
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "source": { "type": "string" },
+              "score": { "type": "number" },
+              "date": { "type": "string", "format": "date" }
+            }
+          }
+        }
+      }
+    },
+
+    "digest_history": {
+      "type": "object",
+      "description": "摘要发送历史（x-digest 专用）",
+      "properties": {
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": { "type": "string", "format": "date" },
+              "items_sent": { "type": "integer" },
+              "titles": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "version": "1.0",
+      "last_run": {
+        "date": "2026-01-23",
+        "timestamp": "2026-01-23T10:30:00Z",
+        "duration_ms": 45000,
+        "items_fetched": 50,
+        "items_included": 20,
+        "sources_success": ["hn", "hf_papers"],
+        "sources_failed": [],
+        "errors": []
+      },
+      "url_cache": {
+        "ttl_days": 7,
+        "entries": {
+          "https://news.ycombinator.com/item?id=12345": "2026-01-23",
+          "https://huggingface.co/papers/2601.12345": "2026-01-23"
+        }
+      },
+      "content_hashes": {
+        "ttl_days": 7,
+        "entries": {
+          "gpt5releasedopen": "2026-01-23"
+        }
+      },
+      "source_stats": {
+        "hn": {
+          "total_runs": 10,
+          "success_count": 9,
+          "success_rate": 0.9,
+          "avg_quality": 4.2,
+          "avg_items": 8,
+          "last_success": "2026-01-23T10:30:00Z",
+          "consecutive_failures": 0
+        }
+      },
+      "article_history": {
+        "max_entries": 500,
+        "entries": [
+          {
+            "title": "GPT-5 Released",
+            "url": "https://example.com/gpt5",
+            "source": "hn",
+            "score": 5,
+            "date": "2026-01-23"
+          }
+        ]
+      }
+    }
+  ]
+}

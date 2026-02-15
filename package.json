@@ -1,0 +1,14 @@
+{
+  "name": "info-agent-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "fast-check": "^3.23.2",
+    "vitest": "^2.1.9"
+  }
+}

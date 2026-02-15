@@ -1,0 +1,7 @@
+{
+  "parent_page_id": "YOUR_PARENT_PAGE_ID",
+  "database_id": "YOUR_DATABASE_ID",
+  "data_source_id": "YOUR_DATA_SOURCE_ID",
+  "database_name": "Daily News Archive",
+  "created_at": "YYYY-MM-DD"
+}

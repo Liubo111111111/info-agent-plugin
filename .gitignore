@@ -1,0 +1,15 @@
+# 用户配置（含敏感信息）
+**/.env
+**/sources.json
+**/config.json
+**/cache.json
+**/sync-history.json
+
+# 用户自定义
+**/EXTEND.md
+
+# 运行时输出
+output_info/
+
+# Node
+node_modules/

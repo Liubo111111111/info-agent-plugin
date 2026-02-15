@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-01-23",
+
+  "predefined_topics": [
+    {
+      "id": "ai_agent",
+      "name": "AI Agent 框架",
+      "keywords": "AI agent framework autonomous",
+      "description": "AI 代理和自主智能体框架"
+    },
+    {
+      "id": "llm_tools",
+      "name": "LLM 工具",
+      "keywords": "LLM tools utilities large language model",
+      "description": "大语言模型相关工具和实用程序"
+    },
+    {
+      "id": "rag",
+      "name": "RAG 框架",
+      "keywords": "RAG retrieval augmented generation vector",
+      "description": "检索增强生成框架"
+    },
+    {
+      "id": "mcp",
+      "name": "MCP Server",
+      "keywords": "model context protocol MCP server",
+      "description": "Model Context Protocol 服务器实现"
+    },
+    {
+      "id": "code_assistant",
+      "name": "代码助手",
+      "keywords": "code assistant copilot IDE plugin",
+      "description": "AI 代码辅助工具"
+    },
+    {
+      "id": "prompt_engineering",
+      "name": "Prompt 工程",
+      "keywords": "prompt engineering template management",
+      "description": "Prompt 模板和工程工具"
+    },
+    {
+      "id": "vector_db",
+      "name": "向量数据库",
+      "keywords": "vector database embedding search",
+      "description": "向量数据库和相似度搜索"
+    },
+    {
+      "id": "fine_tuning",
+      "name": "模型微调",
+      "keywords": "fine-tuning LLM training PEFT LoRA",
+      "description": "大模型微调工具"
+    }
+  ],
+
+  "search_config": {
+    "results_per_search": 10,
+    "auto_view_top_n": 5,
+    "sort_by": "stars",
+    "language_filter": null,
+    "min_stars": 100
+  },
+
+  "output": {
+    "directory": "output_info",
+    "filename_format": "YYYY-MM-DD-{topic}.md"
+  },
+
+  "scoring": {
+    "thresholds": {
+      "5": 10000,
+      "4": 1000,
+      "3": 100,
+      "2": 10,
+      "1": 0
+    },
+    "boost_factors": {
+      "recent_update_days": 30,
+      "has_readme": true,
+      "has_license": true
+    }
+  }
+}

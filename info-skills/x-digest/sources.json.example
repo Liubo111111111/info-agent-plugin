@@ -1,0 +1,72 @@
+{
+  "version": "2.0",
+  "last_updated": "2026-01-26",
+  "description": "X (Twitter) Digest 配置文件，专注于 X 列表内容抓取",
+
+  "x_lists": {
+    "description": "X 列表配置，支持多个列表",
+    "lists": [
+      {
+        "id": "ai_researchers",
+        "name": "AI Researchers",
+        "url": "https://x.com/i/lists/YOUR_LIST_ID_1",
+        "enabled": true,
+        "priority": 1,
+        "note": "用户配置的 X 列表"
+      },
+      {
+        "id": "llm_builders",
+        "name": "LLM Builders",
+        "url": "https://x.com/i/lists/YOUR_LIST_ID_2",
+        "enabled": false,
+        "priority": 2,
+        "note": "替换为你的 X 列表 URL"
+      }
+    ],
+    "fetch_config": {
+      "max_posts_per_list": 50,
+      "time_window_hours": 24,
+      "require_engagement": false,
+      "min_likes": 0
+    },
+    "keywords": {
+      "required": [
+        "AI", "LLM", "GPT", "Claude", "Gemini", "Llama",
+        "Machine Learning", "Deep Learning", "Neural",
+        "Transformer", "Diffusion", "RAG", "Agent",
+        "OpenAI", "Anthropic", "Google AI", "Meta AI",
+        "ChatGPT", "Copilot", "Mistral", "Qwen",
+        "embedding", "fine-tuning", "inference"
+      ],
+      "boost": [
+        "breakthrough", "release", "launch", "benchmark",
+        "open source", "paper", "research"
+      ],
+      "exclude": [
+        "hiring", "job", "sponsor", "ad", "giveaway"
+      ]
+    }
+  },
+
+  "digest": {
+    "description": "摘要生成配置",
+    "min_items": 3,
+    "max_items": 5,
+    "min_quality_score": 3,
+    "fallback_quality_score": 2,
+    "extended_time_window_hours": 48
+  },
+
+  "quality_weights": {
+    "description": "质量评分权重",
+    "source_weights": {
+      "x_list": 1.0
+    },
+    "engagement_weights": {
+      "x_likes": 0.005,
+      "x_retweets": 0.01,
+      "x_replies": 0.008
+    }
+  }
+}
+

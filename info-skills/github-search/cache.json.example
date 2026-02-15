@@ -1,0 +1,17 @@
+{
+  "last_run": {
+    "date": "YYYY-MM-DD",
+    "timestamp": "YYYY-MM-DDTHH:mm:ssZ",
+    "errors": []
+  },
+  "url_cache": {
+    "ttl_days": 7,
+    "entries": {}
+  },
+  "content_hashes": {
+    "entries": {}
+  },
+  "digest_history": {
+    "entries": []
+  }
+}

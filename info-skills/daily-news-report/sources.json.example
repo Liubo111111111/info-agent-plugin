@@ -1,0 +1,450 @@
+{
+  "version": "3.0",
+  "last_updated": "2026-02-15",
+
+  "sources": {
+    "tier1": {
+      "description": "高命中率源，优先抓取",
+      "batch_a": [
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "url": "https://news.ycombinator.com",
+          "fetch_method": "webfetch",
+          "extract": "top_15",
+          "enabled": true,
+          "avg_quality": 4.5,
+          "success_rate": 0.95,
+          "note": "首页热帖，按 points 排序取 Top 15"
+        },
+        {
+          "id": "hf_papers",
+          "name": "HuggingFace Papers",
+          "url": "https://huggingface.co/papers",
+          "fetch_method": "webfetch",
+          "extract": "top_voted",
+          "enabled": true,
+          "avg_quality": 4.8,
+          "success_rate": 0.98
+        }
+      ],
+      "batch_b": [
+        {
+          "id": "one_useful_thing",
+          "name": "One Useful Thing",
+          "url": "https://www.oneusefulthing.org",
+          "fetch_method": "webfetch",
+          "extract": "latest_3",
+          "enabled": true,
+          "avg_quality": 4.7,
+          "success_rate": 0.92
+        },
+        {
+          "id": "paul_graham",
+          "name": "Paul Graham Essays",
+          "url": "https://paulgraham.com/articles.html",
+          "fetch_method": "webfetch",
+          "extract": "latest_5",
+          "enabled": true,
+          "avg_quality": 4.6,
+          "success_rate": 0.99
+        }
+      ]
+    },
+
+    "tier1_hn_blogs": {
+      "description": "HN 社区最受欢迎的顶级技术博客 RSS 源（来自 HN Popularity Contest 2025）",
+      "note": "这些博客是 HN 社区投票选出的最高质量独立技术博客，通过 RSS 抓取最新文章",
+      "fetch_method": "rss_batch",
+      "rss_config": {
+        "concurrency": 10,
+        "timeout_ms": 15000,
+        "time_window_hours": 72,
+        "max_articles_per_feed": 3,
+        "total_max_articles": 30
+      },
+      "feeds": [
+        {
+          "id": "simonwillison",
+          "name": "Simon Willison",
+          "rss_url": "https://simonwillison.net/atom/everything/",
+          "homepage": "https://simonwillison.net",
+          "tags": ["AI", "LLM", "Python", "Tools"],
+          "hn_rank": 1,
+          "enabled": true
+        },
+        {
+          "id": "jeffgeerling",
+          "name": "Jeff Geerling",
+          "rss_url": "https://www.jeffgeerling.com/blog.xml",
+          "homepage": "https://www.jeffgeerling.com",
+          "tags": ["Hardware", "Raspberry Pi", "Self-hosted"],
+          "hn_rank": 2,
+          "enabled": true
+        },
+        {
+          "id": "seangoedecke",
+          "name": "Sean Goedecke",
+          "rss_url": "https://www.seangoedecke.com/feed.xml",
+          "homepage": "https://www.seangoedecke.com",
+          "tags": ["Engineering", "Career", "Big Tech"],
+          "hn_rank": 3,
+          "enabled": true
+        },
+        {
+          "id": "krebsonsecurity",
+          "name": "Krebs on Security",
+          "rss_url": "https://krebsonsecurity.com/feed/",
+          "homepage": "https://krebsonsecurity.com",
+          "tags": ["Security", "Cybercrime"],
+          "hn_rank": 4,
+          "enabled": true
+        },
+        {
+          "id": "nealagarwal",
+          "name": "Neal Agarwal",
+          "rss_url": "https://nealagarwal.me/feed.xml",
+          "homepage": "https://nealagarwal.me",
+          "tags": ["Interactive", "Web Art"],
+          "hn_rank": 5,
+          "enabled": false,
+          "note": "交互式内容，RSS 提取价值有限"
+        },
+        {
+          "id": "daringfireball",
+          "name": "Daring Fireball (John Gruber)",
+          "rss_url": "https://daringfireball.net/feeds/main",
+          "homepage": "https://daringfireball.net",
+          "tags": ["Apple", "Tech Industry"],
+          "hn_rank": 6,
+          "enabled": true
+        },
+        {
+          "id": "overreacted",
+          "name": "Overreacted (Dan Abramov)",
+          "rss_url": "https://overreacted.io/rss.xml",
+          "homepage": "https://overreacted.io",
+          "tags": ["React", "JavaScript", "Engineering"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "gwern",
+          "name": "Gwern Branwen",
+          "rss_url": "https://gwern.net/feed",
+          "homepage": "https://gwern.net",
+          "tags": ["AI", "Research", "Statistics"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "antirez",
+          "name": "Antirez (Salvatore Sanfilippo)",
+          "rss_url": "http://antirez.com/rss",
+          "homepage": "http://antirez.com",
+          "tags": ["Redis", "Systems", "C"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "troyhunt",
+          "name": "Troy Hunt",
+          "rss_url": "https://www.troyhunt.com/rss/",
+          "homepage": "https://www.troyhunt.com",
+          "tags": ["Security", "Privacy", "Web"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "mitchellh",
+          "name": "Mitchell Hashimoto",
+          "rss_url": "https://mitchellh.com/feed",
+          "homepage": "https://mitchellh.com",
+          "tags": ["Infrastructure", "Go", "Systems"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "eli_bendersky",
+          "name": "Eli Bendersky",
+          "rss_url": "https://eli.thegreenplace.net/feeds/all.atom.xml",
+          "homepage": "https://eli.thegreenplace.net",
+          "tags": ["Go", "Compilers", "Programming"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "jvns",
+          "name": "Julia Evans",
+          "rss_url": "https://jvns.ca/atom.xml",
+          "homepage": "https://jvns.ca",
+          "tags": ["Linux", "Networking", "Zines"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "rachelbythebay",
+          "name": "Rachel by the Bay",
+          "rss_url": "https://rachelbythebay.com/w/atom.xml",
+          "homepage": "https://rachelbythebay.com",
+          "tags": ["Systems", "Debugging", "SRE"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "danluu",
+          "name": "Dan Luu",
+          "rss_url": "https://danluu.com/atom.xml",
+          "homepage": "https://danluu.com",
+          "tags": ["Performance", "Systems", "Engineering"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "colmmacc",
+          "name": "Colm MacCárthaigh",
+          "rss_url": "https://shufflesharding.com/feed",
+          "homepage": "https://shufflesharding.com",
+          "tags": ["Distributed Systems", "Networking"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "fasterthanli",
+          "name": "fasterthanlime (Amos)",
+          "rss_url": "https://fasterthanli.me/index.xml",
+          "homepage": "https://fasterthanli.me",
+          "tags": ["Rust", "Systems", "Deep Dives"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "steveklabnik",
+          "name": "Steve Klabnik",
+          "rss_url": "https://steveklabnik.com/feed.xml",
+          "homepage": "https://steveklabnik.com",
+          "tags": ["Rust", "Programming Languages"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "brandur",
+          "name": "Brandur Leach",
+          "rss_url": "https://brandur.org/articles.atom",
+          "homepage": "https://brandur.org",
+          "tags": ["Postgres", "Go", "API Design"],
+          "hn_rank": null,
+          "enabled": true
+        },
+        {
+          "id": "matklad",
+          "name": "matklad (Alex Kladov)",
+          "rss_url": "https://matklad.github.io/feed.xml",
+          "homepage": "https://matklad.github.io",
+          "tags": ["Rust", "IDE", "rust-analyzer"],
+          "hn_rank": null,
+          "enabled": true
+        }
+      ]
+    },
+
+    "tier2": {
+      "description": "中等命中率，按需抓取",
+      "batch_a": [
+        {
+          "id": "james_clear",
+          "name": "James Clear 3-2-1",
+          "url": "https://jamesclear.com/3-2-1",
+          "fetch_method": "webfetch",
+          "extract": "latest_issue",
+          "enabled": true,
+          "avg_quality": 4.3,
+          "success_rate": 0.90
+        },
+        {
+          "id": "fs_blog",
+          "name": "Farnam Street Brain Food",
+          "url": "https://fs.blog/brain-food",
+          "fetch_method": "webfetch",
+          "extract": "latest_issue",
+          "enabled": true,
+          "avg_quality": 4.4,
+          "success_rate": 0.88
+        }
+      ],
+      "batch_b": [
+        {
+          "id": "hackernoon_pm",
+          "name": "HackerNoon PM",
+          "url": "https://hackernoon.com/c/product-management",
+          "fetch_method": "webfetch",
+          "extract": "latest_5",
+          "enabled": true,
+          "avg_quality": 3.8,
+          "success_rate": 0.85
+        },
+        {
+          "id": "scotthyoung",
+          "name": "Scott Young Blog",
+          "url": "https://scotthyoung.com/blog/articles",
+          "fetch_method": "webfetch",
+          "extract": "latest_3",
+          "enabled": true,
+          "avg_quality": 4.0,
+          "success_rate": 0.90
+        }
+      ]
+    },
+
+    "tier3_browser": {
+      "description": "需要浏览器渲染的源",
+      "sources": [
+        {
+          "id": "producthunt",
+          "name": "Product Hunt",
+          "url": "https://www.producthunt.com",
+          "fetch_method": "browser",
+          "extract": "today_top_5",
+          "enabled": true,
+          "avg_quality": 4.2,
+          "success_rate": 0.75,
+          "note": "需要无头浏览器，403 on WebFetch"
+        },
+        {
+          "id": "latent_space",
+          "name": "Latent Space",
+          "url": "https://www.latent.space",
+          "fetch_method": "browser",
+          "extract": "latest_3",
+          "enabled": true,
+          "avg_quality": 4.6,
+          "success_rate": 0.70,
+          "note": "Substack 需要 JS 渲染"
+        }
+      ]
+    },
+
+    "disabled": {
+      "description": "已禁用的源（失效或低质量）",
+      "sources": [
+        {
+          "id": "tldr_ai",
+          "name": "TLDR AI",
+          "url": "https://tldr.tech/ai",
+          "reason": "订阅页面，无文章列表",
+          "disabled_date": "2026-01-21"
+        },
+        {
+          "id": "bensbites",
+          "name": "Ben's Bites",
+          "url": "https://bensbites.com/archive",
+          "reason": "需要登录/付费墙",
+          "disabled_date": "2026-01-21"
+        },
+        {
+          "id": "interconnects",
+          "name": "Interconnects AI",
+          "url": "https://interconnects.ai",
+          "reason": "内容提取失败，Substack 结构问题",
+          "disabled_date": "2026-01-21"
+        },
+        {
+          "id": "beehiiv_rss",
+          "name": "Beehiiv RSS feeds",
+          "url": "https://rss.beehiiv.com",
+          "reason": "RSS 抓取困难",
+          "disabled_date": "2026-01-21"
+        }
+      ]
+    }
+  },
+
+  "categories": {
+    "description": "六大分类体系，用于文章自动归类",
+    "list": [
+      {
+        "id": "ai_ml",
+        "name": "🤖 AI / ML",
+        "keywords": ["AI", "ML", "LLM", "GPT", "Claude", "Gemini", "deep learning", "transformer", "diffusion", "RAG", "agent", "fine-tuning", "inference", "embedding"],
+        "description": "AI、机器学习、LLM、深度学习"
+      },
+      {
+        "id": "security",
+        "name": "🔒 安全",
+        "keywords": ["security", "vulnerability", "CVE", "exploit", "privacy", "encryption", "cybercrime", "breach", "malware"],
+        "description": "安全、隐私、漏洞、加密"
+      },
+      {
+        "id": "engineering",
+        "name": "⚙️ 工程",
+        "keywords": ["architecture", "system design", "programming", "compiler", "database", "distributed", "performance", "algorithm"],
+        "description": "软件工程、架构、编程语言、系统设计"
+      },
+      {
+        "id": "tools_oss",
+        "name": "🛠 工具 / 开源",
+        "keywords": ["open source", "tool", "framework", "library", "release", "launch", "CLI", "SDK", "MCP"],
+        "description": "开发工具、开源项目、新发布的库/框架"
+      },
+      {
+        "id": "opinions",
+        "name": "💡 观点 / 杂谈",
+        "keywords": ["opinion", "career", "culture", "startup", "management", "hiring", "remote", "productivity"],
+        "description": "行业观点、个人思考、职业发展"
+      },
+      {
+        "id": "other",
+        "name": "📝 其他",
+        "keywords": [],
+        "description": "不属于以上分类的内容"
+      }
+    ]
+  },
+
+  "scoring": {
+    "description": "三维评分体系（参考 ai-daily-digest）",
+    "dimensions": {
+      "relevance": {
+        "weight": 0.4,
+        "scale": "1-10",
+        "description": "与 AI/技术前沿的相关性"
+      },
+      "quality": {
+        "weight": 0.35,
+        "scale": "1-10",
+        "description": "内容深度、原创性、实用性"
+      },
+      "timeliness": {
+        "weight": 0.25,
+        "scale": "1-10",
+        "description": "时效性、新鲜度"
+      }
+    },
+    "final_score_formula": "round((relevance * 0.4 + quality * 0.35 + timeliness * 0.25) / 2)",
+    "note": "三维加权平均后除以 2 映射到 1-5 星"
+  },
+
+  "fetch_config": {
+    "webfetch": {
+      "timeout_ms": 30000,
+      "retry_count": 1,
+      "cache_ttl_minutes": 60
+    },
+    "rss_batch": {
+      "concurrency": 10,
+      "timeout_ms": 15000,
+      "cache_ttl_minutes": 120
+    },
+    "browser": {
+      "timeout_ms": 45000,
+      "wait_for_selector": "article, .post, .item",
+      "screenshot_on_error": true
+    }
+  },
+
+  "quality_thresholds": {
+    "min_score_to_include": 3,
+    "target_items": 20,
+    "early_stop_threshold": 25
+  }
+}

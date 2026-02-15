@@ -1,0 +1,113 @@
+{
+  "version": "3.0",
+  "description": "Info Collector Agent 配置文件（v3.0 含 HN 博客 RSS、三维评分、六大分类）",
+  "created_at": "2026-01-23",
+  "updated_at": "2026-02-15",
+
+  "content_fetcher": {
+    "default_method": "jina",
+    "enable_playwright_fallback": true,
+    "playwright_timeout_ms": 30000,
+    "min_content_length": 100,
+    "cache": {
+      "enabled": true,
+      "ttl_hours": 24
+    },
+    "logging": {
+      "level": "info",
+      "log_fallbacks": true
+    }
+  },
+
+  "enabled_skills": {
+    "daily-news-report": {
+      "enabled": true,
+      "priority": 2,
+      "description": "每日新闻报告（HN 热帖 + HN 博客 RSS + HuggingFace + 博客）"
+    },
+    "x-digest": {
+      "enabled": false,
+      "priority": 1,
+      "description": "X AI 精选摘要（3-5 条）"
+    },
+    "github-search": {
+      "enabled": true,
+      "priority": 3,
+      "description": "GitHub 项目搜索"
+    }
+  },
+
+  "modes": {
+    "full": {
+      "description": "完整报告模式",
+      "skills": ["daily-news-report", "x-digest", "github-search"],
+      "max_items": 30
+    },
+    "quick": {
+      "description": "快速摘要模式",
+      "skills": ["x-digest"],
+      "max_items": 10
+    },
+    "topic": {
+      "description": "主题聚焦模式",
+      "skills": ["x-digest", "github-search"],
+      "max_items": 20
+    }
+  },
+
+  "default_mode": "quick",
+
+  "output": {
+    "directory": "output_info",
+    "file_pattern": "YYYY-MM-DD-{mode}.md"
+  },
+
+  "max_items_per_skill": {
+    "daily-news-report": 20,
+    "x-digest": 5,
+    "github-search": 10
+  },
+
+  "deduplication": {
+    "enabled": true,
+    "url_match": true,
+    "title_similarity_threshold": 0.8
+  },
+
+  "notion_sync": {
+    "enabled": true,
+    "auto_sync": true,
+    "sync_skill": "notion-sync"
+  },
+
+  "fetch_stats": {
+    "enabled": true,
+    "include_in_report": true,
+    "failure_rate_warning_threshold": 0.5
+  },
+
+  "intent_keywords": {
+    "full_mode": [
+      "每日信息汇总",
+      "完整报告",
+      "详细分析",
+      "全面搜集"
+    ],
+    "quick_mode": [
+      "快速",
+      "简要",
+      "热点",
+      "速览"
+    ],
+    "topic_mode": [
+      "相关",
+      "关于",
+      "主题",
+      "搜索"
+    ],
+    "source_specific": {
+      "github": ["GitHub", "开源项目", "仓库"],
+      "x": ["X", "Twitter", "推特"]
+    }
+  }
+}

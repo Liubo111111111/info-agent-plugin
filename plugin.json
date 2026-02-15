@@ -1,0 +1,63 @@
+{
+  "name": "info-agent-plugin",
+  "version": "1.0.0",
+  "description": "信息搜集 Agent Plugin — 从 HN、GitHub、X 等源聚合高质量技术内容",
+  "author": "YOUR_NAME",
+  "repository": "https://github.com/YOUR_GITHUB_USERNAME/info-agent-plugin",
+  "skills": [
+    {
+      "name": "daily-news-report",
+      "path": "info-skills/daily-news-report",
+      "description": "从 HN、HuggingFace、RSS 博客等源生成每日新闻报告"
+    },
+    {
+      "name": "x-digest",
+      "path": "info-skills/x-digest",
+      "description": "从 X (Twitter) 列表抓取 AI/LLM 精选摘要"
+    },
+    {
+      "name": "github-search",
+      "path": "info-skills/github-search",
+      "description": "搜索 GitHub 开源项目并生成结构化报告"
+    },
+    {
+      "name": "info-collector",
+      "path": "info-skills/info-collector",
+      "description": "统一信息搜集入口，协调调用多个 Skills"
+    },
+    {
+      "name": "url-to-markdown",
+      "path": "utility-skills/url-to-markdown",
+      "description": "网页内容提取并转换为 Markdown"
+    },
+    {
+      "name": "notion-sync",
+      "path": "utility-skills/notion-sync",
+      "description": "将报告同步到 Notion 数据库"
+    }
+  ],
+  "shared": {
+    "path": "_shared",
+    "modules": [
+      "content-fetcher.md",
+      "format-spec.md",
+      "hn-fetcher.md",
+      "dedup-scoring.md",
+      "browser-utils.md",
+      "cache-schema.json"
+    ]
+  },
+  "dependencies": {
+    "skills": [],
+    "shared": [
+      "_shared/content-fetcher.md",
+      "_shared/format-spec.md",
+      "_shared/hn-fetcher.md",
+      "_shared/dedup-scoring.md",
+      "_shared/browser-utils.md",
+      "_shared/cache-schema.json",
+      "_shared/scripts/content-fetcher.js",
+      "_shared/scripts/fetch-jina.js"
+    ]
+  }
+}
