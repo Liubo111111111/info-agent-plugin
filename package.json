@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "swarm:mvp": "node projects/agent-swarm-mvp/src/cli.js"
   },
   "devDependencies": {
     "fast-check": "^3.23.2",
