@@ -10,6 +10,9 @@
 
 # 运行时输出
 output_info/
+projects/agent-swarm-mvp/runtime/
+projects/agent-swarm-mvp/runtime-wsl-demo/
+.tmp_gh_token
 
 # Node
 node_modules/
